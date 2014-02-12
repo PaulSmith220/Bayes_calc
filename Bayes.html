@@ -1,0 +1,41 @@
+<html>
+<body>
+<center>
+
+<div style="text-align:left; display:block; border:1px solid black; width: 300px;">
+<input id="pA" type="range" min="0" onchange="Change();" max="100" step="0.5" value="50"/>P(A) = <span id="PAs">50</span> %<br>
+<input id="pXA" type="range" min="0" onchange="AChange();" max="100" step="0.5" value="50"/>P(X|A) = <span id="PXAs">50</span> %<br>
+<input id="pXnA" type="range" min="0" onchange="nAChange();" max="100" step="0.5" value="50"/>P(X|~A) = <span id="PXnAs">50</span> %<br>
+<br><br>
+<center>
+	
+	<span id="result">~</span> %
+
+</center>
+</div>
+</center>
+</body>
+<script>
+function nAChange() {
+	document.getElementById('PXnAs').innerHTML = document.getElementById('pXnA').value;
+	res();
+}
+function AChange() {
+	document.getElementById('PXAs').innerHTML = document.getElementById('pXA').value;
+	res();
+}
+function Change() {
+	document.getElementById('PAs').innerHTML = document.getElementById('pA').value;
+	res();
+}
+
+function res() {
+	var pA = document.getElementById('pA').value / 100,
+		pnA = 1 - pA,
+		pXA = document.getElementById('pXA').value / 100,
+		pXnA = document.getElementById('pXnA').value / 100,
+		Bayes = (pA * pXA) / (pA * pXA + pnA * pXnA);
+	document.getElementById('result').innerHTML = (Bayes*100).toFixed(2);
+}
+</script>
+</html>
