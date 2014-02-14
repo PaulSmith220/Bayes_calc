@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_str"
+            android:id="@+id/TitleTextView"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="120dp" android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp" android:shadowColor="#cffffc" android:singleLine="false"
+            android:textColor="#b4fffa" android:textStyle="bold" android:textSize="16dp"
+            android:textIsSelectable="false" android:typeface="normal"/>
+    <SeekBar
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar_pA"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="10dp" android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp" android:max="200" android:progress="100"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:id="@+id/textView_pA" android:layout_toRightOf="@+id/seekBar_pA"
+            android:layout_alignTop="@+id/seekBar_pA" android:layout_marginTop="5dp" android:layout_marginLeft="10dp"
+            android:clickable="true" android:textColor="@color/tdigits_color"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50"
+              android:id="@+id/textView_pXA"
+              android:clickable="true" android:textColor="@color/tdigits_color"
+              android:layout_alignTop="@+id/seekBar_pXA" android:layout_toRightOf="@+id/seekBar_pXA"
+              android:layout_marginLeft="10dp" android:layout_marginTop="5dp"/>
+    <SeekBar android:layout_width="265dp" android:layout_height="wrap_content" android:id="@+id/seekBar_pXA"
+             android:max="200" android:progress="100" android:layout_alignLeft="@+id/seekBar_pA"
+             android:layout_below="@+id/seekBar_pA" android:focusableInTouchMode="true"
+             android:layout_marginTop="50dp"/>
+    <SeekBar android:layout_width="265dp" android:layout_height="wrap_content" android:id="@+id/seekBar_pXnA"
+             android:max="200" android:progress="100"
+             android:focusableInTouchMode="true"
+             android:layout_alignLeft="@+id/seekBar_pA" android:layout_below="@+id/seekBar_pXA"
+             android:layout_marginTop="50dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50"
+              android:id="@+id/textView_pXnA" android:clickable="true" android:textColor="@color/tdigits_color"
+              android:layout_marginTop="5dp" android:layout_alignTop="@+id/seekBar_pXnA"
+              android:layout_marginLeft="10dp" android:layout_toRightOf="@+id/seekBar_pXnA"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50 %"
+            android:id="@+id/textView_Result" android:layout_alignParentLeft="true" android:layout_marginLeft="150dp"
+            android:layout_alignParentTop="true" android:layout_marginTop="350dp"
+            android:textColor="@color/tdigits_color" android:textSize="42dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView" android:layout_alignParentLeft="false"
+            android:layout_below="@+id/textView_Result" android:src="@drawable/bayes" android:layout_marginTop="20dp"
+            android:layout_alignWithParentIfMissing="false" android:layout_centerHorizontal="true"
+            android:layout_marginRight="120dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="by Paul Smith"
+            android:id="@+id/textView" android:layout_alignParentLeft="true" android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"/>
+    <ProgressBar
+            android:layout_width="338dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:indeterminate="false"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal" android:max="200" android:progress="100"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView_Result" android:layout_alignParentRight="true"/>
+</RelativeLayout>
